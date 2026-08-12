@@ -3,6 +3,10 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+#dlt
+.dlt/
+auth.json
+
 # C extensions
 *.so
 

@@ -1,13 +1,13 @@
-from dotenv import load_dotenv
 import base64
-import os
+import json
 
-load_dotenv()
+with open('auth.json','r',encoding='utf-8') as file:
+    data = json.load(file)
 
-_login = os.getenv('SMARTUP_LOGIN')
-_password = os.getenv('SMARTUP_PASSWORD')
-_project_code = os.getenv('SMARTUP_PROJECT_CODE')
-_filial_id = os.getenv('SMARTUP_FILIAL_ID')
+_login = data['SMARTUP_LOGIN']
+_password = data['SMARTUP_PASSWORD']
+_project_code = data['SMARTUP_PROJECT_CODE']
+_filial_id = data['SMARTUP_FILIAL_ID']
 
 # endpoints
 ENDPOINTS = {
